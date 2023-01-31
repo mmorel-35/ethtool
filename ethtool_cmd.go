@@ -85,20 +85,20 @@ func (f *EthtoolCmd) reflect(retv *map[string]uint64) {
 		t := valueField.Interface()
 		//tt := reflect.TypeOf(t)
 		//fmt.Printf(" t %T %v  tt %T %v\n", t, t, tt, tt)
-		switch t.(type) {
+		switch t := t.(type) {
 		case uint32:
 			//fmt.Printf("    t is uint32\n")
-			(*retv)[typeField.Name] = uint64(t.(uint32))
+			(*retv)[typeField.Name] = uint64(t)
 		case uint16:
-			(*retv)[typeField.Name] = uint64(t.(uint16))
+			(*retv)[typeField.Name] = uint64(t)
 		case uint8:
-			(*retv)[typeField.Name] = uint64(t.(uint8))
+			(*retv)[typeField.Name] = uint64(t)
 		case int32:
-			(*retv)[typeField.Name] = uint64(t.(int32))
+			(*retv)[typeField.Name] = uint64(t)
 		case int16:
-			(*retv)[typeField.Name] = uint64(t.(int16))
+			(*retv)[typeField.Name] = uint64(t)
 		case int8:
-			(*retv)[typeField.Name] = uint64(t.(int8))
+			(*retv)[typeField.Name] = uint64(t)
 		default:
 			(*retv)[typeField.Name+"_unknown_type"] = 0
 		}
