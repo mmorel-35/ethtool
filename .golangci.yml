@@ -1,10 +1,10 @@
 linters:
   disable:
-    - gosimple
     - unused
   enable:
     - gci
     - gofmt
+    - gosimple
     - misspell
 linters-settings:
   gci:
