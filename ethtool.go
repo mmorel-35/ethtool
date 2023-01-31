@@ -96,10 +96,7 @@ type ethtoolSsetInfo struct {
 }
 
 type ethtoolGetFeaturesBlock struct {
-	available     uint32
-	requested     uint32
 	active        uint32
-	never_changed uint32
 }
 
 type ethtoolGfeatures struct {
